@@ -3,6 +3,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="https://kit.fontawesome.com/7cc983347b.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
@@ -13,40 +17,43 @@
     <title>Lose and Live.</title>
   </head>
   <body>
-    <header class="header-bar mb-3">
-      <div
-        class="container d-flex flex-column flex-md-row align-items-center p-3"
-      >
-        <h4 class="my-0 mr-md-auto font-weight-normal">
-          <a href="/" class="text-white">Lose and Live</a>
-        </h4>
-        <form action="/register" method="POST" class="mb-0 pt-2 pt-md-0">
-          <div class="row align-items-center">
-            <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-              <input
-                name="username"
-                class="form-control form-control-sm "
-                type="text"
-                placeholder="Username"
-                autocomplete="off"
-              />
-            </div>
-            <div class="col-md mr-0 pr-md-0 mb-3 mb-md-0">
-              <input
-                name="password"
-                class="form-control form-control-sm input-dark"
-                type="password"
-                placeholder="Password"
-              />
-            </div>
-            <div class="col-md-auto">
-              <button class="btn btn-primary btn-sm">Sign In</button>
-            </div>
-          </div>
-        </form>
+    <header>
+      <div class="navbar">
+        <div class="logo">
+          <a href="/"><i class="fas fa-dumbbell"></i></a>
+        </div>
+        <nav>
+          <form action="">
+            <ul class="nav-menu">
+              <input class="login" type="text" placeholder="  Username" />
+              <input class="login" type="text" placeholder="  Password" />
+              <button class="sign-in-btn">
+                <a href="/">Sign Up!</a>
+              </button>
+            </ul>
+          </form>
+        </nav>
       </div>
     </header>
-    <section id="home"></section>
+    <section id="home">
+      <div class="main-page">
+        <h1>Lose. Live. Last</h1>
+        <p>
+          Tired of following strict diets and not getting results you want? Not
+          to worry! We use science to determine the right diet for you! Sign
+          up... It's free!
+        </p>
+
+        <button class="sign-up-btn">
+          <a href="/sign-up">Sign Up!</a>
+        </button>
+      </div>
+    </section>
+    <section id="footer">
+      <div class="footer">
+        <p>&copy; Copyright Lose & Live 2020</p>
+      </div>
+    </section>
 
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"

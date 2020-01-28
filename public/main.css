@@ -6,8 +6,95 @@
 
 body {
   margin: auto;
-  background: url('./images/home.png') center no-repeat;
+  background: url('./images/home.jpg') center no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
+}
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+/* Home */
+.main-page {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.main-page h1 {
+  color: rgb(236, 236, 236);
+  font-size: 5rem;
+}
+.main-page p {
+  color: rgb(236, 236, 236);
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+.sign-up-btn {
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 100px;
+  background: #be4bdb;
+  border: none;
+  color: white;
+  font-weight: 300;
+  cursor: pointer;
+}
+.sign-up-btn:hover {
+  background: rgb(134, 51, 155);
+  transition: 0.5s;
+}
+.sign-up-form {
+  background: rgba(0, 0, 0, 0);
+}
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+header {
+  background: black;
+}
+.nav-menu {
+  margin: 0;
+  padding: 0.5rem;
+}
+.logo a {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+  font-size: 40px;
+  color: #be4bdb !important;
+}
+.login {
+  background: rgb(233, 233, 233);
+  color: #0e0e0e;
+  border: 2px solid #be4bdb;
+  padding: 2px;
+  margin: 5px 10px 5px 10px;
+}
+.sign-in-btn {
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  border-radius: 100px;
+  font-weight: 300;
+  border: none;
+  background: #be4bdb;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+.sign-in-btn:hover {
+  background: rgb(134, 51, 155);
+  transition: 0.5s;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: black;
+  padding: 1rem;
+}
+.footer p {
+  margin: auto;
+  color: #be4bdb;
 }
