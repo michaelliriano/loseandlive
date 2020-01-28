@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: auto;
+  background: url('./images/home.png') center no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
