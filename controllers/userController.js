@@ -3,7 +3,7 @@ exports.login = () => {};
 exports.logout = () => {};
 
 exports.signUpGuest = (req, res) => {
-  res.send('Enter your info here');
+  res.render('sign-up');
 };
 
 exports.register = (req, res) => {

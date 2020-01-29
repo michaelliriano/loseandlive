@@ -4,18 +4,25 @@
   box-sizing: border-box;
 }
 
-body {
+a {
+  text-decoration: none !important;
+  color: #fff !important;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Home */
+#home {
   margin: auto;
   background: url('./images/home.jpg') center no-repeat;
   background-size: cover;
   height: 100%;
   width: 100%;
 }
-a {
-  text-decoration: none !important;
-  color: #fff !important;
-}
-/* Home */
+
 .main-page {
   position: absolute;
   top: 40%;
@@ -45,15 +52,13 @@ a {
   background: rgb(134, 51, 155);
   transition: 0.5s;
 }
-.sign-up-form {
-  background: rgba(0, 0, 0, 0);
-}
+
 .navbar {
   display: flex;
   justify-content: flex-end;
 }
 header {
-  background: black;
+  background: rgba(0, 0, 0, 0.918);
 }
 .nav-menu {
   margin: 0;
@@ -61,7 +66,7 @@ header {
 }
 .logo a {
   position: absolute;
-  top: 20px;
+  top: 15px;
   left: 50px;
   font-size: 40px;
   color: #be4bdb !important;
@@ -70,12 +75,11 @@ header {
   background: rgb(233, 233, 233);
   color: #0e0e0e;
   border: 2px solid #be4bdb;
-  padding: 2px;
+  padding: 5px 5px;
   margin: 5px 10px 5px 10px;
 }
 .sign-in-btn {
-  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
-  border-radius: 100px;
+  padding: 0.25rem 0.4rem 0.25rem 0.4rem;
   font-weight: 300;
   border: none;
   background: #be4bdb;
@@ -88,13 +92,84 @@ header {
 }
 .footer {
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   width: 100%;
   text-align: center;
-  background: black;
+  background: rgba(0, 0, 0, 0.8);
   padding: 1rem;
 }
 .footer p {
   margin: auto;
   color: #be4bdb;
+  letter-spacing: 1.5px;
+}
+/* Sign Up Page */
+.sign-up-container {
+  position: relative;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#sign-up {
+  margin: 0;
+  background: url('./images/signup.jpg') center no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+.sign-up-form {
+  position: relative;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.521);
+  height: 100%;
+  width: 600px;
+  top: 0;
+  right: 0;
+  padding: 1rem 3rem 0 3rem;
+}
+.sign-up-page {
+  display: flex;
+  flex-direction: column;
+}
+.sign-up-form h3 {
+  color: #ffffff;
+  font-size: 2.5rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+input {
+  background: #0c000f93;
+  color: #be4bdb;
+  height: 100%;
+  padding: 10px 15px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+label {
+  color: #fff;
+}
+input[type='radio'] {
+  color: white;
+}
+select {
+  color: #be4bdb;
+  background: #0c000f93;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.sign-up-hero {
+  position: absolute;
+  top: 30%;
+  right: 10%;
+  color: #be4bdb;
+  text-transform: uppercase;
+}
+.sign-up-hero h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 8rem;
 }

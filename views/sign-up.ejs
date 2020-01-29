@@ -1,0 +1,114 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <script
+      src="https://kit.fontawesome.com/7cc983347b.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/main.css" />
+    <title>Lose and Live</title>
+  </head>
+  <body>
+    <section id="sign-up">
+      <header>
+        <div class="navbar">
+          <div class="logo">
+            <a href="/"><i class="fas fa-dumbbell"></i></a>
+          </div>
+          <nav>
+            <form action="">
+              <ul class="nav-menu">
+                <input class="login" type="text" placeholder="Username" />
+                <input class="login" type="text" placeholder="Password" />
+                <button class="sign-in-btn">
+                  <a href="/">Sign in</a>
+                </button>
+              </ul>
+            </form>
+          </nav>
+        </div>
+      </header>
+      <div class="sign-up-hero">
+        <h3>
+          The Time <br />
+          is Now!
+        </h3>
+      </div>
+      <div class="sign-up-container">
+        <div class="sign-up-form">
+          <form class="sign-up-page" action="/register" method="POST">
+            <label id="username" for="username">Username</label>
+            <input
+              id="username"
+              name="username"
+              type="text"
+              placeholder="Pick a username"
+            />
+            <label id="email" for="email">Email</label>
+            <input
+              id="email"
+              name="email"
+              type="text"
+              placeholder="Enter your email"
+            />
+            <label id="password" for="password">Password</label>
+            <input
+              id="password"
+              name="password"
+              type="password"
+              placeholder="Pick a password"
+            />
+            <br />
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender">
+              <option value=""></option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Rather not say</option>
+            </select>
+            <br />
+            <label for="age">Age</label>
+            <input
+              id="age"
+              name="age"
+              type="text"
+              placeholder="How old are you?"
+            />
+            <label for="weight">Weight</label>
+            <input id="weight" name="weight" type="text" placeholder="lbs" />
+            <label for="height">Height</label>
+            <input id="feet" name="feet" type="text" placeholder="Feet" />
+            <input id="inches" name="inches" type="text" placeholder="Inches" />
+            <button class="sign-in-btn" type="submit">Sign Up!</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
