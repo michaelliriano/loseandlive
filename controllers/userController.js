@@ -1,4 +1,8 @@
-exports.login = () => {};
+const User = require('../models/User');
+
+exports.login = (req, res) => {
+  res.send('welcome to the dashboard');
+};
 
 exports.logout = () => {};
 
@@ -7,8 +11,17 @@ exports.signUpGuest = (req, res) => {
 };
 
 exports.register = (req, res) => {
-  console.log(req.body);
-  res.send('Thanks for trying to register');
+  let user = new User(req.body);
+  user.register();
+  if (user.errors.length) {
+    res.send(user.errors);
+  } else {
+    res.send('Congrats there are no errors');
+  }
+};
+
+exports.construction = (req, res) => {
+  res.render('construction');
 };
 
 exports.home = (req, res) => {

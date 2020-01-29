@@ -25,10 +25,20 @@
             <a href="/"><i class="fas fa-dumbbell"></i></a>
           </div>
           <nav>
-            <form action="">
+            <form action="/login" method="POST">
               <ul class="nav-menu">
-                <input class="login" type="text" placeholder="Username" />
-                <input class="login" type="text" placeholder="Password" />
+                <input
+                  class="login"
+                  type="text"
+                  name="username"
+                  placeholder="Username"
+                />
+                <input
+                  class="login"
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                />
                 <button class="sign-in-btn">
                   <a href="/">Sign in</a>
                 </button>
@@ -81,14 +91,19 @@
             <input
               id="age"
               name="age"
-              type="text"
+              type="number"
               placeholder="How old are you?"
             />
             <label for="weight">Weight</label>
-            <input id="weight" name="weight" type="text" placeholder="lbs" />
+            <input id="weight" name="weight" type="number" placeholder="lbs" />
             <label for="height">Height</label>
-            <input id="feet" name="feet" type="text" placeholder="Feet" />
-            <input id="inches" name="inches" type="text" placeholder="Inches" />
+            <input id="feet" name="feet" type="number" placeholder="Feet" />
+            <input
+              id="inches"
+              name="inches"
+              type="number"
+              placeholder="Inches"
+            />
             <button class="sign-in-btn" type="submit">Sign Up!</button>
           </form>
         </div>

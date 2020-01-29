@@ -23,13 +23,19 @@
           <a href="/"><i class="fas fa-dumbbell"></i></a>
         </div>
         <nav>
-          <form action="">
+          <ul class="nav-links">
+            <li><a class="active" href="/">Home</a></li>
+            <li><a class="link" href="/about">About</a></li>
+            <li><a class="link" href="/careers">Careers</a></li>
+            <li><a class="link" href="/contact">Contact</a></li>
+          </ul>
+          <form action="/login" method="POST">
             <ul class="nav-menu">
               <input class="login" type="text" placeholder="Username" />
-              <input class="login" type="text" placeholder="Password" />
-              <button class="sign-in-btn">
-                <a href="/">Sign in</a>
-              </button>
+              <input class="login" type="password" placeholder="Password" />
+              <a href="/login"
+                ><button class="sign-in-btn" type="submit">Sign Up!</button></a
+              >
             </ul>
           </form>
         </nav>
