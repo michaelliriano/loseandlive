@@ -31,8 +31,18 @@
           </ul>
           <form action="/login" method="POST">
             <ul class="nav-menu">
-              <input class="login" type="text" placeholder="Username" />
-              <input class="login" type="password" placeholder="Password" />
+              <input
+                class="login"
+                type="text"
+                name="username"
+                placeholder="Username"
+              />
+              <input
+                class="login"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
               <a href="/login"
                 ><button class="sign-in-btn" type="submit">Sign Up!</button></a
               >
@@ -41,8 +51,12 @@
         </nav>
       </div>
     </header>
+
     <section id="home">
       <div class="main-page">
+        <% errors.forEach(function(message){ %>
+        <div class="alert alert-danger text-center"><%= message %></div>
+        <% }) %>
         <h1>Lose. Live. Last</h1>
         <p>
           Tired of following strict diets and not getting results you want? Not

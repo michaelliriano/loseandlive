@@ -1,10 +1,16 @@
-const usersCollection = require('../db').collection('users');
+const bcrypt = require('bcryptjs');
+const usersCollection = require('../db')
+  .db()
+  .collection('users');
 const validator = require('validator');
 
 let User = function(data) {
   this.data = data;
   this.errors = [];
 };
+
+// Sign up validation
+
 User.prototype.validate = function() {
   if (this.data.username == '') {
     this.errors.push('You must provide a username.');
@@ -48,16 +54,40 @@ User.prototype.validate = function() {
   if (this.data.password.length > 0 && this.data.password.length < 8) {
     this.errors.push('Password must be atleast 8 characters');
   }
-  if (this.data.password.length > 100) {
-    this.errors.push('Password cannot exceed 100 characters');
+  if (this.data.password.length > 50) {
+    this.errors.push('Password cannot exceed 50 characters');
   }
   if (this.data.username.length > 0 && this.data.username.length < 4) {
     this.errors.push('Username must be atleast 4 characters');
   }
-  if (this.data.username.length > 15) {
-    this.errors.push('Username cannot exceed 15 characters');
+  if (this.data.username.length > 20) {
+    this.errors.push('Username cannot exceed 20 characters');
   }
 };
+
+User.prototype.login = function() {
+  return new Promise((resolve, reject) => {
+    this.cleanUp();
+    usersCollection
+      .findOne({ username: this.data.username })
+      .then(attemptedUser => {
+        if (
+          attemptedUser &&
+          bcrypt.compareSync(this.data.password, attemptedUser.password)
+        ) {
+          resolve('Congrats');
+        } else {
+          reject('invalid username/password');
+        }
+      })
+      .catch(function() {
+        reject('Please try again later');
+      });
+  });
+};
+
+// Cleanup inputs
+
 User.prototype.cleanUp = function() {
   if (typeof this.data.username != 'string') {
     this.data.username = '';
@@ -68,8 +98,6 @@ User.prototype.cleanUp = function() {
   if (typeof this.data.password != 'string') {
     this.data.password = '';
   }
-
-  // get rid of any bogus properties
   this.data = {
     username: this.data.username.trim().toLowerCase(),
     email: this.data.email.trim().toLowerCase(),
@@ -82,12 +110,17 @@ User.prototype.cleanUp = function() {
   };
 };
 
+// Register Function
+
 User.prototype.register = function() {
   // Validate user data
   this.cleanUp();
   this.validate();
   // If no validation errors
   if (!this.errors.length) {
+    // hash password
+    let salt = bcrypt.genSaltSync(10);
+    this.data.password = bcrypt.hashSync(this.data.password, salt);
     usersCollection.insertOne(this.data);
   }
   // Save user data into database

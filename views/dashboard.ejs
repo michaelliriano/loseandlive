@@ -1,0 +1,109 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Lose Live Last</title>
+
+    <link rel="stylesheet" href="/main.css" />
+  </head>
+  <body>
+    <section id="dashboard">
+      <div class="dashboard-wrapper">
+        <div class="user-profile">
+          <div class="username">
+            <h3><%= username %></h3>
+          </div>
+
+          <ul class="user-nav">
+            <li class="user-link"></li>
+            <li class="user-link">Home</li>
+            <li class="user-link">Update Stats</li>
+            <li class="user-link">
+              <form action="/logout" method="post">
+                <li class="user-link-logout">
+                  <button type="submit">Logout</button>
+                </li>
+              </form>
+            </li>
+          </ul>
+        </div>
+        <div class="stat-item-1">
+          <div class="circle">
+            YOUR BMI IS: <br />
+            25.5
+          </div>
+          <div class="stat-item-description">
+            <div class="description-header">
+              What is BMI?
+            </div>
+            <p>
+              Body mass index is a value derived from the mass and height of a
+              person. The BMI is defined as the body mass divided by the square
+              of the body height, and is universally expressed in units of
+              kg/m², resulting from mass in kilograms and height in metres.
+            </p>
+          </div>
+        </div>
+        <div class="stat-item-2">
+          <div class="circle">
+            BURNING HEART <br />
+            RATE: 136.4
+          </div>
+          <div class="stat-item-description">
+            <div class="description-header">
+              What is the Burning Heart Rate?
+            </div>
+            <p>
+              This is the area that allows your body to convert energy from fat
+              because it is in a lower state of cardio—unlike the cardio zone,
+              which requires instant fuel that your body more easily converts
+              from glycogen (the energy from your food).In lay terms, when you
+              exercise at a higher intensity, your body goes for energy that is
+              most easily accessible (energy from food). When you exercise at a
+              moderate intensity, your body doesn’t need energy as instantly and
+              instead sources it primarily from fat
+            </p>
+          </div>
+        </div>
+        <div class="stat-item-3">
+          <div class="circle">
+            TOTAL CALORIES: <br />
+            1743
+          </div>
+          <div class="stat-item-description">
+            <div class="description-header">
+              Why Calories Matter?
+            </div>
+            <p>
+              This is the amount of calories you need to consume a day to be at
+              a caloric deficit. A caloric deficit is when the amount of
+              calories that we consume is lower than the amount of calories we
+              burn. In a caloric deficit, our body mass decreases. A caloric
+              surplus is when the amount of calories that we consume is higher
+              than the amount of calories we burn. In a caloric surplus, our
+              body mass increases.
+            </p>
+          </div>
+        </div>
+        <div class="stat-item-4">
+          <div class="circle">
+            WEIGHTLOSS <br />
+            0lbs
+          </div>
+          <div class="stat-item-description">
+            <div class="description-header">
+              Losing Weight:
+            </div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo
+              voluptatem expedita beatae dolorem quia recusandae voluptate
+              dolore? Ut exercitationem sint, ab iusto aliquid repudiandae omnis
+              saepe, asperiores a molestias suscipit.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
