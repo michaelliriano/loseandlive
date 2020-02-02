@@ -48,6 +48,9 @@
         </div>
       </header>
       <div class="sign-up-hero">
+        <% regErrors.forEach(function(message){ %>
+        <div class="alert alert-danger small"><%= message %></div>
+        <% }) %>
         <h3>
           The Time <br />
           is Now!

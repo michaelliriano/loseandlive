@@ -27,17 +27,36 @@ exports.logout = function(req, res) {
 };
 
 exports.signUpGuest = (req, res) => {
-  res.render('sign-up');
+  if (req.session.user) {
+    res.render('dashboard', {
+      username: req.session.user.username
+    });
+  } else {
+    res.render('sign-up', {
+      errors: req.flash('errors'),
+      regErrors: req.flash('regErrors')
+    });
+  }
 };
 
 exports.register = (req, res) => {
   let user = new User(req.body);
-  user.register();
-  if (user.errors.length) {
-    res.send(user.errors);
-  } else {
-    res.send('Congrats there are no errors!');
-  }
+  user
+    .register()
+    .then(() => {
+      req.session.user = { username: user.data.username };
+      req.session.save(function() {
+        res.redirect('/');
+      });
+    })
+    .catch(regErrors => {
+      regErrors.forEach(function(error) {
+        req.flash('regErrors', error);
+      });
+      req.session.save(function() {
+        res.redirect('/sign-up');
+      });
+    });
 };
 
 exports.construction = (req, res) => {
