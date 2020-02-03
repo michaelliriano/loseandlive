@@ -6,7 +6,12 @@ exports.login = function(req, res) {
     .login()
     .then(function(result) {
       req.session.user = {
-        username: user.data.username
+        username: user.data.username,
+        weight: user.data.weight,
+        age: user.data.age,
+        feet: user.data.feet,
+        inches: user.data.inches,
+        gender: user.data.gender
       };
       req.session.save(function() {
         res.redirect('/');
@@ -29,7 +34,12 @@ exports.logout = function(req, res) {
 exports.signUpGuest = (req, res) => {
   if (req.session.user) {
     res.render('dashboard', {
-      username: req.session.user.username
+      username: req.session.user.username,
+      weight: req.session.user.weight,
+      feet: req.session.user.feet,
+      inches: req.session.user.inches,
+      age: req.session.user.age,
+      gender: req.session.user.gender
     });
   } else {
     res.render('sign-up', {
@@ -44,7 +54,14 @@ exports.register = (req, res) => {
   user
     .register()
     .then(() => {
-      req.session.user = { username: user.data.username };
+      req.session.user = {
+        username: user.data.username,
+        weight: user.data.weight,
+        feet: user.data.feet,
+        inches: user.data.inches,
+        age: user.data.age,
+        gender: user.data.gender
+      };
       req.session.save(function() {
         res.redirect('/');
       });
@@ -66,7 +83,12 @@ exports.construction = (req, res) => {
 exports.home = (req, res) => {
   if (req.session.user) {
     res.render('dashboard', {
-      username: req.session.user.username
+      username: req.session.user.username,
+      weight: req.session.user.weight,
+      feet: req.session.user.feet,
+      inches: req.session.user.inches,
+      age: req.session.user.age,
+      gender: req.session.user.gender
     });
   } else {
     res.render('home', { errors: req.flash('errors') });

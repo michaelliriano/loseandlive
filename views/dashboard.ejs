@@ -31,7 +31,10 @@
         <div class="stat-item-1">
           <div class="circle">
             YOUR BMI IS: <br />
-            25.5
+            <% let heightFeet = parseInt(feet) * 12; let totalHeight =
+            heightFeet + parseInt(inches); let bmiOne =
+            parseInt(weight)/totalHeight; let bmiTwo = bmiOne/totalHeight; let
+            finalBmi = bmiTwo * 703; %> <%= Math.round(finalBmi) %>
           </div>
           <div class="stat-item-description">
             <div class="description-header">
@@ -48,7 +51,8 @@
         <div class="stat-item-2">
           <div class="circle">
             BURNING HEART <br />
-            RATE: 136.4
+            <% let newAge = parseInt(age); let bhrOne = 220 - newAge; let
+            bhrFinal = bhrOne * .70; %> RATE: <%= Math.round(bhrFinal) %>
           </div>
           <div class="stat-item-description">
             <div class="description-header">
@@ -69,7 +73,10 @@
         <div class="stat-item-3">
           <div class="circle">
             TOTAL CALORIES: <br />
-            1743
+            <% let bmrOne = parseInt(weight) * 6.3 + 66; let bmrTwo = bmrOne +
+            (12.9 * totalHeight); finalBmr = bmrTwo - (6.8 * parseInt(age)); let
+            finalCalorie = finalBmr * 1.375 %> <%= Math.round(finalCalorie) -
+            500 %>
           </div>
           <div class="stat-item-description">
             <div class="description-header">
