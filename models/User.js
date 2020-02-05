@@ -92,7 +92,9 @@ User.prototype.login = function() {
   return new Promise((resolve, reject) => {
     this.cleanUp();
     usersCollection
-      .findOne({ username: this.data.username })
+      .findOne({
+        username: this.data.username
+      })
       .then(attemptedUser => {
         if (
           attemptedUser &&

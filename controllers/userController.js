@@ -6,12 +6,7 @@ exports.login = function(req, res) {
     .login()
     .then(function(result) {
       req.session.user = {
-        username: user.data.username,
-        weight: user.data.weight,
-        age: user.data.age,
-        feet: user.data.feet,
-        inches: user.data.inches,
-        gender: user.data.gender
+        username: user.data.username
       };
       req.session.save(function() {
         res.redirect('/');

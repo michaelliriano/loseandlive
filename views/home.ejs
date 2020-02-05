@@ -17,10 +17,22 @@
     <title>Lose Live Last</title>
   </head>
   <body>
+    <div id="nav-display-small" class="nav-display-small">
+      <div id="exit" class="exit"><i class="far fa-times-circle"></i></div>
+      <ul class="small-nav-links">
+        <li><a class="active" href="/">Home</a></li>
+        <li><a class="link" href="/about">About</a></li>
+        <li><a class="link" href="/careers">Careers</a></li>
+        <li><a class="link" href="/contact">Contact</a></li>
+      </ul>
+    </div>
     <header>
       <div class="navbar">
         <div class="logo">
           <a href="/"><i class="fas fa-dumbbell"></i></a>
+        </div>
+        <div id="small-menu" class="burger-menu">
+          <i class="fas fa-bars"></i>
         </div>
         <nav>
           <ul class="nav-links">
@@ -44,7 +56,7 @@
                 placeholder="Password"
               />
               <a href="/login"
-                ><button class="sign-in-btn" type="submit">Sign Up!</button></a
+                ><button class="sign-in-btn" type="submit">Sign in</button></a
               >
             </ul>
           </form>
@@ -74,7 +86,7 @@
         <p>&copy; Copyright Lose Live Last 2020</p>
       </div>
     </section>
-
+    <script src="/main.js"></script>
     <script
       src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
       integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
